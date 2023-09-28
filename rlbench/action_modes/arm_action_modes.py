@@ -92,8 +92,6 @@ class JointPosition(ArmActionMode):
             scene.robot.arm.get_joint_positions()) + action
         scene.robot.arm.set_joint_target_positions(a)
         scene.step()
-        scene.robot.arm.set_joint_target_positions(
-            scene.robot.arm.get_joint_positions())
 
     def action_shape(self, scene: Scene) -> tuple:
         return SUPPORTED_ROBOTS[scene.robot_setup][2],
