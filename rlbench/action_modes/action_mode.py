@@ -16,7 +16,7 @@ class ActionMode(object):
         self.gripper_action_mode = gripper_action_mode
 
     @abstractmethod
-    def action(self, scene: Scene, action: np.ndarray):
+    def action(self, scene: Scene, action: np.ndarray, additional_info: dict = None):
         pass
 
     @abstractmethod
